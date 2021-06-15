@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Metodo addListener</title>
+  </head>
+  <body>
+    <h1>Manejo de eventos DOM</h1>
+    Nombre: <input type="text" id="nombre" />
+    <br />
+    Apellido: <input type="text" id="apellido">
+  </body>
+
+  <script>
+      document.getElementById("nombre").addEventListener("focus",cambiar);
+      document.getElementById("apellido").addEventListener("focus",cambiar);
+      //evento para regresar el fondo a blanco
+      document.getElementById("nombre").addEventListener("blur",regresar);
+      document.getElementById("apellido").addEventListener("blur",regresar);
+
+      function cambiar(evento){
+          let componente= evento.target;//obtiene el objeto donde se esta ejecutando el evento
+          componente.style.background="yellow";    
+      }
+
+      function regresar(evento){
+          evento.target.style.background="white";
+      }
+  </script>
+</html>

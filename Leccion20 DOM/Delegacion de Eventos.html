@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Metodo con funciones flecha</title>
+  </head>
+  <body>
+    <h1>Delegacion de eventos</h1>
+    <form id="formulario">
+        Nombre: <input type="text"/>
+        <br/>
+        Apellido: <input type="text"/>
+    </form>
+
+  </body>
+
+  <script>
+      const forma=document.getElementById("formulario");
+      forma.addEventListener("focus",(evento)=>{
+          evento.target.style.background="green";
+      },true);
+      //evento para regresar el fondo a blanco
+      forma.addEventListener("blur",(evento)=>{
+          evento.target.style.background="white";
+      },true);
+      
+  </script>
+</html>

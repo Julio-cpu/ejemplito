@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manejo DOM con JavaScript</title>
+  </head>
+ 
+  <h1 id="titulo">Manejo DOM con JavaScript</h1>
+  <div id="mostrar"></div>
+  <body onload="entrar()">
+    <br />
+    <script>
+      document.getElementById("titulo").onclick = cambiarTexto;
+
+      function cambiarTexto() {
+        document.getElementById("mostrar").innerHTML = "Nuevo contenido";
+      }
+
+      function entrar(){
+          alert("Este es un ejemplo del evento onLoad");
+          let texto="";
+          
+          if(navigator.cookieEnabled){
+              texto="coockies estan activas";
+          }else{
+              texto="coockies desactivadas";
+          }
+          document.getElementById("mostrar").innerHTML=texto;
+
+      }
+    </script>
+  </body>
+</html>

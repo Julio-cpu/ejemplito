@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id='titulo' onmouseover="rojo(this)" onmouseout="verde(this)">Manejo DOM con JavaScript</h1>
+    <br/>
+    
+    <script>
+       function rojo(titulo){
+            titulo.style.color="red";
+       }
+
+       function verde(titulo){
+           titulo.style.color="green";
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Metodo con funciones flecha</title>
+  </head>
+  <body>
+    <h1>Metodo con funciones flecha junto con metodo addListener</h1>
+    Nombre: <input type="text" id="nombre" />
+    <br />
+    Apellido: <input type="text" id="apellido">
+  </body>
+
+  <script>
+      document.getElementById("nombre").addEventListener("focus",(evento)=>{
+          evento.target.style.background="green";
+      });
+      document.getElementById("apellido").addEventListener("focus",(cambiar));
+      //evento para regresar el fondo a blanco
+      document.getElementById("nombre").addEventListener("blur",(evento)=>{
+          evento.target.style.background="white";
+      });
+      document.getElementById("apellido").addEventListener("blur",regresar);
+
+      function cambiar(evento){
+          let componente= evento.target;//obtiene el objeto donde se esta ejecutando el evento
+          componente.style.background="yellow";    
+      }
+
+      function regresar(evento){
+          evento.target.style.background="white";
+      }
+  </script>
+</html>

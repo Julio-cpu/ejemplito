@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo formulario con JavaScript</title>
+   
+</head>
+<body>
+    
+    <form id="formulario">
+        hora: <input type="number" name="hora" value="">
+        <br>
+        minutos: <input type="number" name="minutos" value="">
+        <br>
+        nombre: <input type="text" name="nombre" value ="">
+        <br>
+
+    </form>
+
+    <button onclick="establecerHora()">
+        Establecer Alarma
+    </button>
+
+    <div id="valores">
+        
+    </div>
+
+    <script>
+        function establecerHora(){
+            let formulario=document.forms["formulario"];
+            let texto="";
+            
+            let nombre= formulario['nombre'];
+            let hora= formulario['hora'];
+            let minutos=formulario['minutos'];
+
+            texto = nombre.value + "<br>" + hora.value +":"+ minutos.value;
+            document.getElementById("valores").innerHTML=texto;
+        }
+    </script>
+</body>
+</html>
